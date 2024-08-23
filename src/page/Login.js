@@ -3,13 +3,15 @@ import { Form, Button, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
 const Login = ({setAuthenticate}) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   const loginUser = (event) => {
     event.preventDefault();
     console.log("login user function issue")
     setAuthenticate(true);
     navigate("/");
-  }
+  };
+
   return (
     <Container>
        <Form onSubmit={(event)=>loginUser(event)}>
@@ -22,7 +24,7 @@ const Login = ({setAuthenticate}) => {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label>PASSWORD</Form.Label>
         <Form.Control type="password" placeholder="Password" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">

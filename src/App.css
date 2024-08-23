@@ -7,6 +7,7 @@
 .nav-section {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .menu-list {
    display: flex;
@@ -28,4 +29,52 @@
 .product-img {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu-area {
+    display: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .menu-list li {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .product-img {
+    display: block;
+    width: 100%;
+  }
 }
